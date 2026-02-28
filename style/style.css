@@ -82,7 +82,6 @@ video {
     justify-self: center;
     object-fit: cover;
     object-position: center 14%;
-    filter: grayscale(0.95) contrast(1.03);
     border: 5px solid rgba(244, 244, 244, 0.72);
     box-shadow:
         0 30px 34px rgba(70, 39, 38, 0.22),
@@ -313,11 +312,11 @@ main {
 }
 
 .row-2 {
-    grid-template-columns: 0.16fr 1.45fr 0.25fr 0.95fr 0.2fr;
+    grid-template-columns: 0.16fr 1.58fr 0.25fr 0.89fr 0.2fr;
 }
 
 .row-3 {
-    grid-template-columns: 0.16fr 1.02fr 1.45fr 0.2fr;
+    grid-template-columns: 0.16fr 0.89fr 1.58fr 0.2fr;
 }
 
 .row-space {
@@ -326,10 +325,10 @@ main {
 
 .photo-note {
     align-self: start;
-    font-size: clamp(0.56rem, 0.95vw, 0.86rem);
+    font-size: clamp(0.64rem, 1.1vw, 0.98rem);
     line-height: 1.28;
     font-weight: 500;
-    color: #88a282;
+    color: #000000;
 }
 
 .photo-frame {
@@ -347,6 +346,10 @@ main {
 
 .photo-frame.portrait {
     aspect-ratio: 3 / 4;
+}
+
+.row-1 .photo-frame.portrait {
+    aspect-ratio: 1 / 1;
 }
 
 .photo-frame.landscape {
@@ -412,9 +415,9 @@ main {
 }
 
 .graphic-captions p {
-    font-size: 0.84rem;
+    font-size: clamp(0.9rem, 1.15vw, 1.03rem);
     line-height: 1.33;
-    color: #88a282;
+    color: #000000;
 }
 
 .graphic-spread {
@@ -434,9 +437,9 @@ main {
 }
 
 .spread-caption {
-    font-size: 0.84rem;
+    font-size: clamp(1rem, 1.3vw, 1.14rem);
     line-height: 1.33;
-    color: #88a282;
+    color: #000000;
     max-width: 62ch;
 }
 
@@ -497,10 +500,16 @@ main {
         gap: 0.45rem;
     }
 
-    .photo-note,
-    .graphic-captions p,
+    .photo-note {
+        font-size: clamp(0.6rem, 1.9vw, 0.82rem);
+    }
+
+    .graphic-captions p {
+        font-size: clamp(0.6rem, 1.9vw, 0.82rem);
+    }
+
     .spread-caption {
-        font-size: clamp(0.52rem, 1.7vw, 0.72rem);
+        font-size: clamp(0.68rem, 2.2vw, 0.95rem);
     }
 }
 
