@@ -349,7 +349,7 @@ main {
 }
 
 .row-1 .photo-frame.portrait {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 15 / 16;
 }
 
 .photo-frame.landscape {
