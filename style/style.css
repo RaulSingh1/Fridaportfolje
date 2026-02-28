@@ -312,11 +312,58 @@ main {
 }
 
 .row-2 {
-    grid-template-columns: 0.16fr 1.58fr 0.25fr 0.89fr 0.2fr;
+    grid-template-columns:
+        minmax(0, 0.16fr)
+        minmax(0, 1.45fr)
+        minmax(0, 0.12fr)
+        minmax(0, 0.82fr)
+        minmax(0, 0.2fr);
+}
+
+.row-2 > * {
+    min-width: 0;
+}
+
+.row-2 .photo-frame {
+    overflow: hidden;
+}
+
+.row-2 .photo-frame.portrait {
+    transform: translateX(clamp(-12px, -1vw, -6px));
 }
 
 .row-3 {
-    grid-template-columns: 0.16fr 0.89fr 1.58fr 0.2fr;
+    grid-template-columns:
+        minmax(0, 0.16fr)
+        minmax(0, 0.82fr)
+        minmax(0, 0.12fr)
+        minmax(0, 1.45fr)
+        minmax(0, 0.2fr);
+}
+
+.row-3 > * {
+    min-width: 0;
+}
+
+.row-3 > :nth-child(1) {
+    grid-column: 1;
+}
+
+.row-3 > :nth-child(2) {
+    grid-column: 2;
+}
+
+.row-3 > :nth-child(3) {
+    grid-column: 4;
+}
+
+.row-3 > :nth-child(4) {
+    grid-column: 5;
+    transform: translateX(clamp(-8px, -0.7vw, -4px));
+}
+
+.row-3 .photo-frame.landscape {
+    transform: translateX(clamp(-10px, -0.9vw, -5px));
 }
 
 .row-space {
