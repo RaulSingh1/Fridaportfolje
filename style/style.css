@@ -378,6 +378,17 @@ main {
     color: #000000;
 }
 
+.row-2 .photo-note-malcom {
+    margin-top: clamp(0.3rem, 0.6vw, 0.45rem);
+    padding-right: clamp(0.2rem, 0.5vw, 0.45rem);
+    transform: translateX(clamp(-18px, -1.5vw, -10px));
+}
+
+.row-3 .photo-note-row3-left {
+    padding-right: clamp(0.55rem, 1vw, 0.9rem);
+    transform: translateX(clamp(-8px, -0.8vw, -4px));
+}
+
 .photo-frame {
     margin: 0;
     background: #ececec;
